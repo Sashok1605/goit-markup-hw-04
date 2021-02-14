@@ -128,20 +128,42 @@ header {
   color: var(--accent-color);
 }
 
+.nav-icon:hover {
+  fill: var(--accent-color);
+}
+
 .info.list li:first-child {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .info.list {
   display: flex;
   align-items: center;
-  margin-left: 331px;
+  margin-left: 305px;
+}
+
+.info-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  margin-right: 10px;
+  display: inline-block;
+  align-items: center;
+  background-size: contain;
 }
 
 /* Блок решения и заказа */
 
 .decision {
-  background-color: #2f303a;
   height: 600px;
   display: flex;
   text-align: center;
@@ -149,6 +171,11 @@ header {
   padding-top: 200px;
   padding-bottom: 200px;
   margin: 0px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/people.jpg);
 }
 
 .decision-title {
@@ -192,6 +219,32 @@ header {
 .hero.list {
   display: flex;
   justify-content: space-between;
+}
+
+.hero-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-bg-color);
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 
 .hero-title {
@@ -272,9 +325,10 @@ header {
   padding-bottom: 94px;
 }
 
-.team.list li:not(:last-child) {
+.team-prof:not(:last-child) {
   margin-right: 30px;
 }
+
 .team-title {
   color: var(--title-text-color1);
   font-weight: 500;
@@ -291,11 +345,107 @@ header {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .team-card {
   text-align: center;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 32px;
+  margin-left: 32px;
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+.social-icon-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-icon-link:hover > svg,
+.social-icon-link:focus > svg {
+  fill: var(--secondary-text-color);
+}
+
+.social-icon-link > svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+/* Наши клиенты */
+
+.clients {
+  padding-top: 94px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 94px;
+}
+
+.clients-list .clients-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-title {
+  color: var(--title-text-color1);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 50px;
+}
+
+.clients-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+}
+
+.clients-icon > svg {
+  fill: #afb1b8;
+}
+
+.clients-icon:hover > svg {
+  fill: var(--accent-color);
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+  border: 1px solid #2196f3;
 }
 
 /* Контакты подвал*/
@@ -337,16 +487,50 @@ header {
   padding-bottom: 9px;
 }
 
-.contacts-nav .link {
+.contacts-nav .link-footer {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
 
-.contacts-nav .link:hover,
-.contacts-nav .link:focus {
+.contacts-nav .link-footer:hover,
+.contacts-nav .link-footer:focus {
   color: var(--accent-color);
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer.list {
+  display: flex;
+}
+
+.footer-social {
+  margin-left: 70px;
+  padding-top: 9px;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-icon a {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon svg {
+  fill: var(--secondary-text-color);
+}
+
+.footer.list li:not(:last-child) {
+  margin-right: 10px;
 }
 
 .button.primary:focus,
@@ -410,6 +594,8 @@ header {
 .project-info {
   margin-left: -2px;
   border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-blok {
