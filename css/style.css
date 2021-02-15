@@ -126,6 +126,7 @@ header {
 .info-nav .link:hover,
 .info-nav .link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .nav-icon:hover {
@@ -153,6 +154,11 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+/* .nav-icon :hover,
+.nav-icon :focus {
+  fill: var(--accent-color);
+} */
 
 .nav-icon {
   margin-right: 10px;
@@ -443,9 +449,14 @@ header {
   fill: var(--accent-color);
 }
 
+.clients-icon:focus > svg {
+  fill: var(--accent-color);
+}
+
 .clients-icon:hover,
 .clients-icon:focus {
   border: 1px solid #2196f3;
+  fill: var(--accent-color);
 }
 
 /* Контакты подвал*/
@@ -594,6 +605,12 @@ header {
 .project-info {
   margin-left: -2px;
   border: 1px solid #eeeeee;
+  /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16); */
+}
+
+.project-info:hover,
+.project-info:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
